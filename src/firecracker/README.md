@@ -1,38 +1,21 @@
-# Setup Firecracker #
+# Firecracker #
 
-[/firecracker-microvm/firecracker/docs](https://github.com/firecracker-microvm/firecracker/tree/main/docs)
+## 1. Setup ##
 
-## Step 1. Install firecracker and add it as executable ##
-
-```bash
-chmod +x ~/src/install-firecracker.sh
-sudo ~/src/install-firecracker.sh
-```
-
-## Step 2. Install dependencies - Linux Kernel, Root FS ##
+Run below -
 
 ```bash
-chmod +x ~/src/install-firecracker-dependencies.sh
-sudo ~/src/install-firecracker-dependencies.sh
+chmod +x setup
+
+# install firecracker
+bash ./setup/install.sh
+bash ./setup/prereqs.sh
+
+# setup bridge network on the host
+bash ~/init/setup/network/host/bridge.sh
+
+# run firecracker vm
+bash ./setup/run.sh
 ```
 
-## Step 3. Create MicroVM kernel configuration JSON file ##
-
-`touch ~/src/microvm-configs.json`
-
-## Step 4. Add VM configurations ##
-
-`vim ~/src/microvm-configs.json`
-
-- Paste the baseline configs provided with `microvm-configs.json`
-- Update the path for the dependencies - `kernel_image_path` and `path_on_host` variables in config.json
-- Save and exit file - `!wq`
-
-The `microvm-configs.json` file arguments could be customized as per the system requirements. `firecracker` api documentation is available at [/firecracker/swagger/firecracker.yaml](https://github.com/firecracker-microvm/firecracker/blob/main/src/firecracker/swagger/firecracker.yaml)
-
-## Step 5. Run a MicroVM ##
-
-```bash
-chmod +x ~/src/run.sh
-sudo ~/src/run.sh
-```
+After the vm has started run the commands given in script `init/setup/network/guest/setup.sh` on the guest vm shell in order to connect the VM with the tap interface we created on the bridge on our host.
