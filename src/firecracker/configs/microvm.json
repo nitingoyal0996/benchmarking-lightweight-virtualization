@@ -11,7 +11,7 @@
             "is_root_device": true,
             "cache_type": "Unsafe",
             "is_read_only": false,
-            "path_on_host": "/firecracker/releases/release-v1.7.0-x86_64/ubuntu-22.04.ext4",
+            "path_on_host": "/firecracker/releases/release-v1.7.0-x86_64/rootfs.ext4",
             "io_engine": "Sync",
             "rate_limiter": null,
             "socket": null
