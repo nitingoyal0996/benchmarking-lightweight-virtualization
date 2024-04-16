@@ -3,7 +3,7 @@
 # Set parameters
 TEST="memory"
 MEMORY_BLOCK_SIZE="1M"
-MEMORY_TOTAL_SIZE="500M"
+MEMORY_TOTAL_SIZE="5G"
 NUM_THREADS=1
 
 # Run sysbench with memory benchmark
