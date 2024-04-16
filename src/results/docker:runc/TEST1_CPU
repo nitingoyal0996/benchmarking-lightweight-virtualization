@@ -1,0 +1,26 @@
+
+benchcpu.sh
+
+Prime numbers limit: 20000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:   283.42
+
+General statistics:
+    total time:                          10.0029s
+    total number of events:              2836
+
+Latency (ms):
+         min:                                    3.40
+         avg:                                    3.53
+         max:                                   11.25
+         95th percentile:                        3.89
+         sum:                                10000.94
+
+Threads fairness:
+    events (avg/stddev):           2836.0000/0.00
+    execution time (avg/stddev):   10.0009/0.00

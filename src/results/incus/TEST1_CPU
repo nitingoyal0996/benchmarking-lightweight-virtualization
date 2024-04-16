@@ -1,0 +1,75 @@
+
+benchcpu.sh
+
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Prime numbers limit: 20000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:   284.92
+
+General statistics:
+    total time:                          10.0027s
+    total number of events:              2851
+
+Latency (ms):
+         min:                                    3.41
+         avg:                                    3.51
+         max:                                   11.12
+         95th percentile:                        3.75
+         sum:                                10000.91
+
+Threads fairness:
+    events (avg/stddev):           2851.0000/0.00
+    execution time (avg/stddev):   10.0009/0.00
+
+
+Prime numbers limit: 20000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:   284.17
+
+General statistics:
+    total time:                          10.0012s
+    total number of events:              2843
+
+Latency (ms):
+         min:                                    3.41
+         avg:                                    3.52
+         max:                                    7.24
+         95th percentile:                        3.89
+         sum:                                 9999.57
+
+Threads fairness:
+    events (avg/stddev):           2843.0000/0.00
+    execution time (avg/stddev):   9.9996/0.00
+
+
+
+CPU speed:
+    events per second:   281.98
+
+General statistics:
+    total time:                          10.0009s
+    total number of events:              2821
+
+Latency (ms):
+         min:                                    3.42
+         avg:                                    3.54
+         max:                                    8.24
+         95th percentile:                        3.89
+         sum:                                 9998.72
+
+Threads fairness:
+    events (avg/stddev):           2821.0000/0.00
+    execution time (avg/stddev):   9.9987/0.00
