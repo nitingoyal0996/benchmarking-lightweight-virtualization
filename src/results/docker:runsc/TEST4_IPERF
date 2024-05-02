@@ -1,0 +1,13 @@
+Measuring Latency...
+PING google.com (172.217.12.14): 56 data bytes
+64 bytes from 172.217.12.14: seq=0 ttl=109 time=27.701 ms
+64 bytes from 172.217.12.14: seq=1 ttl=109 time=27.743 ms
+64 bytes from 172.217.12.14: seq=2 ttl=109 time=27.773 ms
+64 bytes from 172.217.12.14: seq=3 ttl=109 time=27.806 ms
+64 bytes from 172.217.12.14: seq=4 ttl=109 time=27.781 ms
+
+--- google.com ping statistics ---
+5 packets transmitted, 5 packets received, 0% packet loss
+round-trip min/avg/max = 27.701/27.760/27.806 ms
+Measuring Packet Loss...
+100 packets transmitted, 100 packets received, 0% packet loss

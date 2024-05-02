@@ -1,0 +1,70 @@
+bash-5.1# strace -c ./benchcpu.sh
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+sysbench 1.0.20-3ce1a53f2b (using bundled LuaJIT 2.1.0-beta2)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Prime numbers limit: 20000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:   282.47
+
+General statistics:
+    total time:                          10.0012s
+    total number of events:              2826
+
+Latency (ms):
+         min:                                    3.40
+         avg:                                    3.54
+         max:                                   11.23
+         95th percentile:                        3.89
+         sum:                                 9999.36
+
+Threads fairness:
+    events (avg/stddev):           2826.0000/0.00
+    execution time (avg/stddev):   9.9994/0.00
+
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.003998        1999         2         1 wait4
+  0.00    0.000000           0         6           read
+  0.00    0.000000           0         5           close
+  0.00    0.000000           0        10         5 open
+  0.00    0.000000           0         3           fstat
+  0.00    0.000000           0        15         7 stat
+  0.00    0.000000           0        34           mmap
+  0.00    0.000000           0         4           mprotect
+  0.00    0.000000           0         5           munmap
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0        16           rt_sigaction
+  0.00    0.000000           0         4           lseek
+  0.00    0.000000           0         1           rt_sigreturn
+  0.00    0.000000           0        11         2 ioctl
+  0.00    0.000000           0         2           readv
+  0.00    0.000000           0         1           access
+  0.00    0.000000           0        17           rt_sigprocmask
+  0.00    0.000000           0         1           dup2
+  0.00    0.000000           0         3           getpid
+  0.00    0.000000           0         1           fork
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           uname
+  0.00    0.000000           0         5         1 fcntl
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1           getgid
+  0.00    0.000000           0         1           geteuid
+  0.00    0.000000           0         1           getegid
+  0.00    0.000000           0         3           getppid
+  0.00    0.000000           0         1           getpgid
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         2           prlimit64
+  0.00    0.000000           0         4           faccessat2
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.003998          24       166        16 total

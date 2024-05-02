@@ -1,0 +1,71 @@
+bash-5.1# strace -c ./benchcpu.sh 
+WARNING: the --test option is deprecated. You can pass a script name or path on the command line without any options.
+sysbench 1.0.20-3ce1a53f2b (using bundled LuaJIT 2.1.0-beta2)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Prime numbers limit: 20000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:   286.32
+
+General statistics:
+    total time:                          10.0027s
+    total number of events:              2865
+
+Latency (ms):
+         min:                                    3.41
+         avg:                                    3.49
+         max:                                    6.72
+         95th percentile:                        3.68
+         sum:                                10001.01
+
+Threads fairness:
+    events (avg/stddev):           2865.0000/0.00
+    execution time (avg/stddev):   10.0010/0.00
+
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 80.01    0.004091        2045         2         1 wait4
+  3.54    0.000181           5        32           mmap
+  2.33    0.000119           8        14         7 stat
+  1.84    0.000094          94         1           fork
+  1.68    0.000086           8        10         5 open
+  1.56    0.000080           4        17           rt_sigprocmask
+  1.49    0.000076           4        16           rt_sigaction
+  1.35    0.000069           6        11         2 ioctl
+  0.88    0.000045          15         3           munmap
+  0.76    0.000039           9         4           mprotect
+  0.74    0.000038           6         6           read
+  0.47    0.000024           4         5           close
+  0.41    0.000021           5         4           faccessat2
+  0.39    0.000020          10         2           readv
+  0.33    0.000017           3         5         1 fcntl
+  0.33    0.000017           4         4           lseek
+  0.25    0.000013          13         1           access
+  0.25    0.000013           4         3           getppid
+  0.23    0.000012           4         3           getpid
+  0.22    0.000011           3         3           fstat
+  0.16    0.000008           4         2           prlimit64
+  0.14    0.000007           7         1           dup2
+  0.14    0.000007           7         1           rt_sigreturn
+  0.10    0.000005           5         1           uname
+  0.08    0.000004           4         1           geteuid
+  0.08    0.000004           4         1           getuid
+  0.08    0.000004           4         1           getgid
+  0.08    0.000004           4         1           getegid
+  0.08    0.000004           4         1           getpgid
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           set_tid_address
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.005113          31       161        16 total
+bash-5.1# 
